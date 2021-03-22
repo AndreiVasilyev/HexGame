@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2048</title>
+    <link rel="stylesheet" type="text/css" href="CSS/index.css">
+</head>
+<body>
+   <div class="option-block style-block">
+        <h3>Game options</h3>
+        <label for="url-server" class="option-label">RND server URL:</label>
+        <select id="url-server">
+          <option id="remote" value="http://68f02c80-3bed-4e10-a747-4ff774ae905a.pub.instances.scw.cloud/" selected>Remote server</option>
+          <option id="localhost" value="http://localhost:13337/">Local server</option>
+        </select>
+        <div class="radio-block">
+           <label for="url-server" class="option-label">Field radius (cells): </label>
+            <div id="field-radius">
+            <input name="level" type="radio" value="1" checked>2
+            <input name="level" type="radio" value="2">3
+            <input name="level" type="radio" value="3">4
+            <input name="level" type="radio" value="4">5
+            </div>
+        </div>
+   </div>  
+   
+   <div class="style-block">Game Status: <span data-status="playing">playing</span></div>
+   <div class="style-block" id="keyHelp">Use q, w, e, a, s, d keys for move</div>
+    <script src="JS/jquery-3.4.1.min.js"></script>
+    <script src="JS/index.js"></script>
+</body>
+</html>
+
+

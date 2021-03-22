@@ -1,0 +1,87 @@
+
+:root{
+    --cell-size: 20px;
+    --cell-height: 35px;
+    --x-shift:-11px;
+    --y-shift: 6px;
+    --field-size: 500px;
+}
+
+.style-block{
+    width: var(--field-size);
+    margin: 2em auto;
+    border: solid 2px #71706c;
+    border-radius: 10px;
+    background-color: #dededc;
+    text-align: center;
+    padding: .5em 0em; 
+    
+}
+.option-block h3{
+    color: #676961;
+}
+
+.option-label{
+    width: 30%;
+}
+
+#url-server, #field-radius{
+    width: 70%;
+    display: inline-block;
+    text-align: left;
+    margin-bottom: .5em;
+}
+
+
+.game-field{
+    position: relative;
+    width: var(--field-size);
+    height: var(--field-size);   
+    margin: 2em auto;
+}
+
+.cell {  
+  position: absolute;
+  width: var(--cell-size); 
+  height: var(--cell-height);
+  background-color: #f0e5c7;  
+  border-top: solid 2px #dbb243;
+  border-bottom: solid 2px #dbb243;
+        
+}
+
+.cell:before,
+.cell:after {
+    content: "";
+    position: absolute;
+    height: var(--cell-size);
+    width: var(--cell-size);
+    top: var(--y-shift);  
+  /*-webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);*/
+    transform: rotate(60deg) skewX(30deg) scaleY(0.86) ;      
+    background: inherit;
+  
+}
+
+.cell:before { 
+    left: var(--x-shift);    
+    border-bottom: solid 2px #dbb243;
+    border-left: solid 2px #dbb243;    
+}
+
+.cell:after {  
+    right: var(--x-shift);
+    border-top: solid 2px #dbb243; 
+    border-right: solid 2px #dbb243;  
+}
+
+.cell-value{
+    position: absolute;
+    z-index: 10;   
+    color: #a07d1f;
+    font-size: calc(var(--cell-size)*0.5);
+    font-weight: bold;    
+}
+
+
