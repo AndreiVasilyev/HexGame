@@ -34,12 +34,10 @@ function initGameField(){
 }
 
 function initStartPage(){
-    let currentPathname=window.location.pathname;
-    console.log('pathName='+currentPathname);
+    let currentPathname=window.location.hash;    
     let currentGameLevel=document.querySelector('input[name="level"]:checked').value;   
-    if(currentPathname.startsWith('/#test')){
-        gameLevel=Number(currentPathname.replace('/#test',''));
-        console.log('gameLevel='+gameLevel);
+    if(currentPathname.startsWith('#test')){
+        gameLevel=Number(currentPathname.replace('#test',''))-1;        
         let radioBlockElement=document.querySelector('.radio-block');
         radioBlockElement.style.display='none';      
     } else if(currentGameLevel>=1) {
